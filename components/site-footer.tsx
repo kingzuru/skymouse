@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { Button } from '@/components/button';
 import { BrandLogo } from '@/components/brand-logo';
 import { Container } from '@/components/container';
 import { navigation, siteConfig } from '@/lib/site';
@@ -8,13 +9,21 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-muted">
       <Container className="py-10">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div className="max-w-md">
+        <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-start">
+          <div className="max-w-xl">
             <BrandLogo variant="full" />
             <p className="mt-3 text-sm leading-6 text-ink">{siteConfig.footerStatement}</p>
             <p className="mt-4 text-sm leading-6 text-muted">
-              {siteConfig.description}
+              {siteConfig.footerDescription}
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button href="/contact" variant="primary">
+                Discuss a project
+              </Button>
+              <Button href="/products" variant="secondary">
+                Explore products
+              </Button>
+            </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2">

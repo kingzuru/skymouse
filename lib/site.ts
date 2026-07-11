@@ -10,6 +10,8 @@ export const siteConfig = {
   support:
     'We design, develop and manage dependable technology platforms for organisations that need more than a website or a once-off software project.',
   footerStatement: 'Independent technology for stronger institutions.',
+  footerDescription:
+    'Skymouse is a Botswana technology company developing governance platforms, enterprise systems, digital services and managed open-source infrastructure.',
   email: 'info@skymouse.co.bw',
   location: 'Botswana',
 };
