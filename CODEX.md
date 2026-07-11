@@ -4,6 +4,17 @@
 
 Build a fast, polished and fully responsive corporate website for Skymouse Holding (Pty) Ltd. The website must establish Skymouse as a credible Botswana technology company that develops institutional platforms, governance technology, enterprise systems and managed open-source infrastructure.
 
+## Required reading order
+
+Before making implementation changes, read and follow:
+
+1. `CODEX.md`
+2. `docs/BRAND_THEME.md`
+3. `docs/WEBSITE_SPRINTS.md`
+4. All approved Markdown files under `content/`
+
+Work one sprint at a time. Each sprint must end with linting and a successful production build before the next sprint begins.
+
 ## Technology
 
 Use:
@@ -43,6 +54,16 @@ The design should feel:
 - Technically capable
 - Calm, clean and confident
 - Modern without looking like a generic SaaS template
+
+Implement the detailed palette, typography, logo handling, layout language and circuit motif defined in `docs/BRAND_THEME.md`.
+
+Core logo-derived colours:
+
+- Forest: `#0A5C2E`
+- Green: `#0F7B3E`
+- Orange: `#E86F14`
+- Gold: `#D4AF37`
+- Ink: `#1F2933`
 
 Avoid excessive gradients, glassmorphism, cartoon illustrations, stock-code imagery and crowded layouts. Use strong typography, deliberate whitespace, restrained motion and clear visual hierarchy.
 
@@ -111,6 +132,15 @@ Add:
 
 The website may either parse Markdown directly or convert the content into typed data structures. Preserve Markdown files as the editorial source of truth.
 
+## Sprint control
+
+Use `docs/WEBSITE_SPRINTS.md` as the delivery sequence and acceptance checklist. Do not skip the foundation and design-system sprints to jump directly into page generation. Report at the end of every sprint:
+
+- files created or changed
+- tests and build commands run
+- decisions made
+- unresolved content or asset dependencies
+
 ## Definition of done
 
 The first release is complete when:
@@ -118,6 +148,7 @@ The first release is complete when:
 - All required routes are implemented
 - Content is drawn from the approved Markdown files
 - The design works on mobile, tablet and desktop
+- The detailed logo-derived theme is consistently implemented
 - Lighthouse fundamentals are addressed
 - Static production build succeeds
 - There are no fabricated claims or placeholder lorem ipsum passages
