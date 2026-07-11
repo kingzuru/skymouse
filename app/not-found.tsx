@@ -1,10 +1,8 @@
 import Link from 'next/link';
 
-import { Container } from '@/components/container';
-
 export default function NotFound() {
   return (
-    <Container className="py-20">
+    <div className="mx-auto flex min-h-[70vh] w-full max-w-site items-center px-4 py-20 sm:px-6 lg:px-8">
       <div className="max-w-xl">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-green">404</p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink">Page not found</h1>
@@ -18,6 +16,6 @@ export default function NotFound() {
           Return home
         </Link>
       </div>
-    </Container>
+    </div>
   );
 }

@@ -28,6 +28,22 @@ npm run build
 
 The site is configured for static output and builds to `out/`.
 
+## Deployment
+
+1. Install dependencies with `npm install`.
+2. Build the static site with `npm run build`.
+3. Serve the generated `out/` directory with a static host, object storage, or an Nginx document root.
+
+If you are using Nginx, point the site root at the generated `out/` directory and enable standard compression and cache headers for static assets.
+
+## Launch checklist
+
+- Confirm every required route renders.
+- Confirm `npm run lint` succeeds.
+- Confirm `npm run build` succeeds.
+- Confirm the generated `out/` directory contains the exported site.
+- Confirm no approved Markdown content was overwritten.
+
 ## Project structure
 
 - `app/` - routes, layout, metadata and static special files
