@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Skymouse">
+  <rect width="512" height="512" rx="112" fill="#FFFFFF" />
+  <path d="M152 116c0-27 22-48 48-48h112c31 0 56 25 56 56v152c0 33-27 60-60 60H206c-39 0-70-31-70-70V116Z" fill="#0A5C2E"/>
+  <path d="M188 158h128c21 0 38 17 38 38v102c0 17-14 31-31 31H207c-24 0-43-19-43-43V176c0-10 8-18 18-18Z" fill="#F5F7F6"/>
+  <path d="M238 214h40c22 0 40 18 40 40v21c0 22-18 40-40 40h-40c-22 0-40-18-40-40v-21c0-22 18-40 40-40Z" fill="#0F7B3E"/>
+  <circle cx="316" cy="187" r="14" fill="#D4AF37"/>
+  <path d="M252 286c39 0 77 22 100 61" stroke="#E86F14" stroke-width="14" stroke-linecap="round"/>
+</svg>

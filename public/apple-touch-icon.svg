@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Skymouse">
+  <rect width="180" height="180" rx="40" fill="#0A5C2E" />
+  <path d="M54 48c0-11 9-20 20-20h34c13 0 24 11 24 24v54c0 12-10 22-22 22H72c-11 0-18-7-18-18V48Z" fill="#F5F7F6"/>
+  <path d="M68 60h33c10 0 18 8 18 18v31c0 8-6 14-14 14H76c-10 0-18-8-18-18V74c0-8 6-14 10-14Z" fill="#0F7B3E"/>
+  <circle cx="108" cy="56" r="5" fill="#D4AF37"/>
+  <path d="M88 90c13 0 25 7 32 19" stroke="#E86F14" stroke-width="5" stroke-linecap="round"/>
+</svg>
