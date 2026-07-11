@@ -1,21 +1,46 @@
 # Skymouse Website
 
-This repository contains the content and implementation brief for the Skymouse corporate website.
+This repository contains the approved content and the Next.js App Router implementation for the Skymouse corporate website.
 
-The first release should be a static Next.js website using the App Router, TypeScript and Tailwind CSS. Markdown files under `content/` are the approved source copy for the website. Codex should preserve the meaning and positioning of the content while adapting it into responsive page layouts and reusable components.
+Sprint 0 establishes the application foundation only:
 
-## Content structure
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- static export configuration
+- shared metadata defaults
+- required route shells
+- linting and formatting configuration
+- basic CI for lint and build
 
-- `CODEX.md` — implementation instructions for Codex
-- `content/site.md` — brand, navigation, SEO and global calls to action
-- `content/home.md` — homepage content
-- `content/about.md` — company profile content
-- `content/solutions.md` — service and capability content
-- `content/products.md` — product portfolio content
-- `content/projects.md` — selected work and case-study summaries
-- `content/insights.md` — initial thought-leadership themes
-- `content/contact.md` — contact-page content
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+## Production build
+
+```bash
+npm run build
+```
+
+The site is configured for static output and builds to `out/`.
+
+## Project structure
+
+- `app/` - routes, layout, metadata and static special files
+- `components/` - shared UI shells and layout primitives
+- `content/` - approved Markdown source copy
+- `docs/` - implementation brief and brand guidance
+- `lib/` - site configuration and metadata helpers
+- `public/` - static icons and social images
+
+## Content source
+
+The Markdown files under `content/` remain the editorial source of truth and are not overwritten by the application scaffold.
 
 ## Positioning
 
-Skymouse is not presented as a generic web-design agency or an outsourced coding shop. It is an independent Botswana technology company that designs, builds and manages digital systems for governance, institutional performance, public service delivery and enterprise operations.
+Skymouse is an independent Botswana technology company that designs, builds and manages digital systems for governance, institutional performance, public service delivery and enterprise operations.
