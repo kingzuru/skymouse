@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         forest: 'var(--brand-forest)',
+        'forest-deep': 'var(--forest-deep)',
         green: 'var(--brand-green)',
         orange: 'var(--brand-orange)',
         gold: 'var(--brand-gold)',
