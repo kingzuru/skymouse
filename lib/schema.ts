@@ -12,7 +12,6 @@ export function organizationSchema() {
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'BW',
-      addressLocality: siteConfig.location,
     },
     brand: siteConfig.shortName,
     description: siteConfig.description,
@@ -52,4 +51,3 @@ export function projectSchema(project: ProjectEntry) {
     mainEntityOfPage: `${siteConfig.url}/projects/${project.slug}`,
   };
 }
-

@@ -25,7 +25,7 @@ export function createPageMetadata({ title, description, path }: PageMetadataInp
       description,
       images: [
         {
-          url: '/og-image.svg',
+          url: '/skymouse_logo.png',
           width: 1200,
           height: 630,
           alt: siteConfig.shortName,
@@ -36,7 +36,7 @@ export function createPageMetadata({ title, description, path }: PageMetadataInp
       card: 'summary_large_image',
       title,
       description,
-      images: ['/og-image.svg'],
+      images: ['/skymouse_logo.png'],
     },
   };
 }

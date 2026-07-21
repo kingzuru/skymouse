@@ -1,5 +1,4 @@
 import { Button } from '@/components/button';
-import { CircuitMotif } from '@/components/circuit-motif';
 import { Section } from '@/components/section';
 
 type CTASectionProps = {
@@ -19,7 +18,6 @@ type CTASectionProps = {
 export function CTASection({ eyebrow, title, description, primaryAction, secondaryAction }: CTASectionProps) {
   return (
     <Section className="relative overflow-hidden bg-forest-deep text-white">
-      <CircuitMotif className="opacity-60" />
       <div className="relative z-10 grid gap-8 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
         <div className="max-w-2xl">
           {eyebrow ? <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">{eyebrow}</p> : null}

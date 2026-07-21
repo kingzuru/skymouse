@@ -66,6 +66,10 @@ details > summary::-webkit-details-marker {
   }
 }
 
+.text-muted {
+  color: var(--text-muted);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

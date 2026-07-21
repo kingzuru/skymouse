@@ -9,6 +9,7 @@ import '@fontsource/inter/800.css';
 
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
+import { TopContactBar } from '@/components/top-contact-bar';
 import { organizationSchema } from '@/lib/schema';
 import { siteConfig } from '@/lib/site';
 
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: '/og-image.svg',
+        url: '/skymouse_logo.png',
         width: 1200,
         height: 630,
         alt: siteConfig.shortName,
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.shortName,
     description: siteConfig.description,
-    images: ['/og-image.svg'],
+    images: ['/skymouse_logo.png'],
   },
   robots: {
     index: true,
@@ -52,8 +53,8 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   icons: {
-    icon: '/favicon.svg',
-    apple: '/apple-touch-icon.svg',
+    icon: '/skymouse_logo.svg',
+    apple: '/skymouse_logo.svg',
   },
 };
 
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
         />
         <div className="flex min-h-screen flex-col">
+          <TopContactBar />
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />

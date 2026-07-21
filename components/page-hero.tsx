@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 import { Button } from '@/components/button';
-import { CircuitMotif } from '@/components/circuit-motif';
+import { InstitutionalGrid } from '@/components/institutional-grid';
 import { Section } from '@/components/section';
 
 type Action = {
@@ -16,8 +16,11 @@ type PageHeroProps = {
   description: string;
   primaryAction?: Action;
   secondaryAction?: Action;
+  supportingLine?: string;
+  credibilityItems?: string[];
   children?: ReactNode;
   tone?: 'light' | 'dark';
+  compact?: boolean;
 };
 
 export function PageHero({
@@ -26,15 +29,22 @@ export function PageHero({
   description,
   primaryAction,
   secondaryAction,
+  supportingLine,
+  credibilityItems,
   children,
   tone = 'light',
+  compact = false,
 }: PageHeroProps) {
   const dark = tone === 'dark';
 
   return (
-    <Section className={dark ? 'relative overflow-hidden bg-forest-deep text-white' : 'relative overflow-hidden bg-white'} muted={false}>
-      <CircuitMotif className={dark ? 'opacity-70' : 'opacity-50'} />
-      <div className="relative z-10 grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-end">
+    <Section
+      paddingClassName={compact ? 'py-12 sm:py-16' : undefined}
+      className={dark ? 'relative overflow-hidden bg-forest-deep text-white' : 'relative overflow-hidden bg-white'}
+      muted={false}
+    >
+      <InstitutionalGrid className={dark ? 'opacity-100' : 'opacity-80'} />
+      <div className="relative z-10 grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-start">
         <div className="max-w-3xl">
           {eyebrow ? (
             <p className={`text-xs font-semibold uppercase tracking-[0.24em] ${dark ? 'text-gold' : 'text-green'}`}>
@@ -58,6 +68,29 @@ export function PageHero({
                 <Button href={secondaryAction.href} variant={secondaryAction.variant ?? 'secondary'}>
                   {secondaryAction.label}
                 </Button>
+              ) : null}
+            </div>
+          ) : null}
+          {supportingLine || credibilityItems?.length ? (
+            <div className="mt-6 space-y-4">
+              {supportingLine ? (
+                <p className={`text-sm font-medium tracking-[0.18em] uppercase ${dark ? 'text-white/70' : 'text-green'}`}>
+                  {supportingLine}
+                </p>
+              ) : null}
+              {credibilityItems?.length ? (
+                <div className="grid gap-2 sm:grid-cols-3">
+                  {credibilityItems.map((item) => (
+                    <div
+                      key={item}
+                      className={`rounded-2xl border px-4 py-3 text-sm font-medium ${
+                        dark ? 'border-white/10 bg-white/5 text-white/80' : 'border-border bg-muted text-ink'
+                      }`}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               ) : null}
             </div>
           ) : null}
